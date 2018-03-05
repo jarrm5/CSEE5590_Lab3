@@ -3,6 +3,7 @@
 $(function() {
     //When the search button is clicked, request using youtube client
     $("form").on("submit", function(e) {
+       //don't allow the default behavior when submitting a form.
        e.preventDefault();
        //Request using q argument
        //supply the query argument from the form
@@ -39,7 +40,9 @@ function loadYTAPI() {
 function buildHTML(e,t){
     result=e;
     for(var n=0;n<t.length;n++){
-        result=result.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})
+        result=result.replace(/\{\{(.*?)\}\}/g,function(e,r){
+            return t[n][r];
+        });
     }
     return result;
 }
