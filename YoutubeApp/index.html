@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Youtube Search</title>
-</head>
-<body>
-    
-</body>
+    <head>		
+        <title>Youtube Search</title>
+        <meta charset="UTF-8" />					
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Awesome videos!" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <style>
+            #logo{
+                text-align:center;
+            }
+
+            #logo img{
+                height:200px;
+                width:200px;
+            }
+
+            form { 
+                margin-top: 20px; 
+            }
+
+            form, #results { 
+                padding: 0 20px; 
+            }
+
+            .item { 
+                margin-bottom: 25px; 
+            }
+
+            .w100 { 
+                width: 100%; 
+            }
+
+            input[type='submit'] {
+                background: #E84617; 
+                border-color: #E84617
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+        
+            <div class="col-md-6 col-md-offset-3">
+                <div id="logo">
+                    <img src="Youtube-Logo.png" alt="Youtube-Logo.png">
+                </div>
+                <form action="#">
+                    <p><input type="text" id="search" placeholder="Search for videos..." autocomplete="off" class="form-control" /></p>
+                    <p><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
+                </form>
+                <div id="results"></div>
+            </div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=loadYTAPI"></script>
+    </body>
 </html>
